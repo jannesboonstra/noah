@@ -1,0 +1,40 @@
+body {
+    background-image: url(space.jpg);
+    background-size: cover;
+}
+
+header {
+    color: white;
+
+    text-shadow: 1px 1px black;
+    text-align: center;
+    font-size: 3rem;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    max-width: 90rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cont {
+    display: flex;
+    max-width: 12rem;
+    width: 12vw;
+    border-radius: 50%;
+    
+}
+.rocket {
+    max-width: 12rem;
+    width: 12vw;
+}
+
+.num {
+    position: absolute;
+    color: white;
+    text-shadow: 1px 1px black;
+}

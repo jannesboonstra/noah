@@ -30,6 +30,8 @@ main {
 }
 .rocket {
     max-width: 12rem;
+    max-height: 12rem;
+    height: 12vw;
     width: 12vw;
 }
 

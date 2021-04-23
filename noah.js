@@ -1,10 +1,12 @@
 let head = document.getElementById("head");
 let main = document.getElementById("main");
+let rocket = document.getElementById("rocket");
+let ufo = document.getElementById("ufo");
 let dagen = new Date(2021,5,18).getTime();
 let woorddag = "";
 let nu = new Date().getTime();
 let verschil = dagen - nu;
-let dag = Math.floor(verschil / (1000 *60*60*24))
+let dag = Math.floor(verschil / (1000 *60*60*24));
 
 if(dag < 0){
     dag = -1;
@@ -28,11 +30,18 @@ switch(dag){
 
 head.innerHTML = woorddag;
 
-for(let i = 0; i < dag; i++){
-    main.innerHTML += `<div class="cont"><img src="loader.gif" class="rocket"></img><p class="num">${i + 1}</p></div>`;
-}
+let afstand = dag + 30;
+rocket.style.top = `${afstand}%`;
 
-if(dag == 0){
-    main.innerHTML = "<img src='birthday.gif'></img>"
-}
-
+setInterval(function(){
+    let zijkant = -10;
+    let timer = setInterval(function(){
+        zijkant++;
+        if(zijkant == 100){
+            clearTimeout(timer);
+            zijkant = 0-20;
+        }
+        ufo.style.left = `${zijkant}%`;
+    }, 50);
+    
+}, 15000)
